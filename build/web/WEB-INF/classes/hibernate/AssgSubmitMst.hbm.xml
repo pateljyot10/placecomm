@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 8, 2013 10:32:16 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="hibernate.AssgSubmitMst" table="assg_submit_mst" catalog="pathshala_db">
+        <id name="assgSubmitId" type="java.lang.Integer">
+            <column name="assg_submit_id" />
+            <generator class="identity" />
+        </id>
+        <property name="assgId" type="java.lang.Integer">
+            <column name="assg_id" />
+        </property>
+        <property name="assgUserId" type="java.lang.Integer">
+            <column name="assg_user_id" />
+        </property>
+        <property name="assgSubmitType" type="java.lang.Integer">
+            <column name="assg_submit_type" />
+        </property>
+        <property name="assgFileUrl" type="string">
+            <column name="assg_file_url" length="200" />
+        </property>
+        <property name="assgResponseText" type="string">
+            <column name="assg_response_text" length="2000" />
+        </property>
+        <property name="assgUsername" type="string">
+            <column name="assg_username" length="50" />
+        </property>
+        <property name="assgSubmitIdHide" type="java.lang.Integer">
+            <column name="assg_submit_id_hide" />
+        </property>
+    </class>
+</hibernate-mapping>

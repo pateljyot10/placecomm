@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 8, 2013 10:32:16 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="hibernate.QzUsers" table="qz_users" catalog="pathshala_db">
+        <id name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" length="100" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="150" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="200" />
+        </property>
+        <property name="lastLog" type="timestamp">
+            <column name="last_log" length="19" />
+        </property>
+        <property name="ipAddress" type="string">
+            <column name="ip_address" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

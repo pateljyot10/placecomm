@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="pathshala_db"/>
+  <table-filter match-name="user_education_dtls"/>
+  <table-filter match-name="cmn_user_role_rlt"/>
+  <table-filter match-name="qz_questions"/>
+  <table-filter match-name="assg_group_user"/>
+  <table-filter match-name="user_personal_dtls"/>
+  <table-filter match-name="assg_mst"/>
+  <table-filter match-name="assg_dtl"/>
+  <table-filter match-name="assg_submit_mst"/>
+  <table-filter match-name="cmn_role_mst"/>
+  <table-filter match-name="user_contact_dtls"/>
+  <table-filter match-name="chat_msg"/>
+  <table-filter match-name="cmn_element_mst"/>
+  <table-filter match-name="cmn_role_element_rlt"/>
+  <table-filter match-name="assg_evaluate_mst"/>
+  <table-filter match-name="qz_quizes"/>
+  <table-filter match-name="chat_pad"/>
+  <table-filter match-name="chat_user_vote"/>
+  <table-filter match-name="user_achievement_dtls"/>
+  <table-filter match-name="qz_users"/>
+  <table-filter match-name="chat_user"/>
+  <table-filter match-name="cmn_role_activation_mpg"/>
+  <table-filter match-name="assg_group_mst"/>
+  <table-filter match-name="cmn_user_mst"/>
+  <table-filter match-name="cmn_university_mst"/>
+</hibernate-reverse-engineering>

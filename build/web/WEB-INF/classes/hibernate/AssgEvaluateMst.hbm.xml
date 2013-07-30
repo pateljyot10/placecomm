@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 8, 2013 10:32:16 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="hibernate.AssgEvaluateMst" table="assg_evaluate_mst" catalog="pathshala_db">
+        <id name="assgEvalId" type="java.lang.Integer">
+            <column name="assg_eval_id" />
+            <generator class="identity" />
+        </id>
+        <property name="assgSubmitId" type="java.lang.Integer">
+            <column name="assg_submit_id" />
+        </property>
+        <property name="assgMstId" type="java.lang.Integer">
+            <column name="assg_mst_id" />
+        </property>
+        <property name="assgUserId" type="java.lang.Integer">
+            <column name="assg_user_id" />
+        </property>
+        <property name="assgEvaluatedMarks" type="java.lang.Integer">
+            <column name="assg_evaluated_marks" />
+        </property>
+        <property name="assgTotalMarks" type="java.lang.Integer">
+            <column name="assg_total_marks" />
+        </property>
+        <property name="assgRejected" type="java.lang.Integer">
+            <column name="assg_rejected" />
+        </property>
+        <property name="assgCopied" type="java.lang.Integer">
+            <column name="assg_copied" />
+        </property>
+        <property name="assgRemarks" type="string">
+            <column name="assg_remarks" length="50" />
+        </property>
+        <property name="assgEvalIdHide" type="java.lang.Integer">
+            <column name="assg_eval_id_hide" />
+        </property>
+    </class>
+</hibernate-mapping>

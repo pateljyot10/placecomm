@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 8, 2013 10:32:16 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="hibernate.AssgDtl" table="assg_dtl" catalog="pathshala_db">
+        <id name="assgDtlId" type="java.lang.Integer">
+            <column name="assg_dtl_id" />
+            <generator class="identity" />
+        </id>
+        <property name="assgMstId" type="int">
+            <column name="assg_mst_id" not-null="true">
+                <comment>Reference to the Assg_MST Table</comment>
+            </column>
+        </property>
+        <property name="assgGroupFlag" type="int">
+            <column name="assg_group_flag" not-null="true">
+                <comment>0 Means Only User and 1 Means Group ID</comment>
+            </column>
+        </property>
+        <property name="assgUserId" type="int">
+            <column name="assg_user_id" not-null="true" />
+        </property>
+        <property name="assgDtlIdHide" type="java.lang.Integer">
+            <column name="assg_dtl_id_hide" />
+        </property>
+    </class>
+</hibernate-mapping>

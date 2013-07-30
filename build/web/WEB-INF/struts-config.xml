@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="CreateAssgForm" type="theAssignment.CreateAssgForm"/>
+        <form-bean name="AssignmentForm" type="theAssignment.AssignmentForm"/>
+        <form-bean name="GDActionForm" type="GroupDiscussion.GDActionForm"/>
+        <!--<form-bean name="LoginForm" type="Forms.LoginForm"/>-->
+        <form-bean name="ResultsForm" type="theAssignment.EvaluateAssgForm" />
+        <form-bean name="EvaluateAssgForm" type="theAssignment.EvaluateAssgForm"/>
+        <form-bean name="QuizForm" type="theAssignment.QuizForm"/>
+        <form-bean name="StudentQuizForm" type="theAssignment.StudentQuizForm"/>
+        
+        <form-bean name="ViewUserEducationDtlForm" type="user.form.ViewUserEducationDtlForm"/>
+        <form-bean name="UserEducationDtlForm" type="user.form.UserEducationDtlForm"/>
+        <form-bean name="UserEducationDtl" type="user.form.UserEducationDtl"/>
+        <form-bean name="ViewUserContactDtlForm" type="user.form.ViewUserContactDtlForm"/>
+        <form-bean name="UserContactDtlForm" type="user.form.UserContactDtlForm"/>
+        <form-bean name="UserPersonalDtlForm" type="user.form.UserPersonalDtlForm"/>
+        <form-bean name="UserForm" type="common.form.UserForm"/>
+        <form-bean name="LoginForm" type="common.form.LoginForm"/>
+
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+    </global-forwards>
+
+    <action-mappings>
+        
+        <!-- <action  path="/Welcome"
+                 forward="/welcomeStruts.jsp" /> -->
+        
+        
+        <!-- Anjana... -->
+        
+                <action  path="/viewUserPersonalinfo"
+                 forward="/WEB-INF/jsp/User/editPersonalDtls.jsp" />
+        
+        
+        <action  path="/viewUserEducationDtls" name="ViewUserEducationDtlForm"
+                 scope="request" 
+                 forward="/WEB-INF/jsp/User/editEducation.jsp" />
+      
+        <action  path="/viewUserContactDtls" name="ViewUserContactDtlForm"
+                 scope="request" type="user.action.ViewUserContactDtlAction" 
+                 forward="/WEB-INF/jsp/User/editContactDtl.jsp" />
+
+         <action  path="/Welcome"
+                 forward="/WEB-INF/jsp/User/login.jsp" />
+         
+         <action input="/WEB-INF/jsp/User/login.jsp" 
+                name="LoginForm" 
+                path="/login" 
+                scope="request" 
+                 type="common.action.LoginAction">
+        <forward name="success" path="/WEB-INF/jsp/User/homePage.jsp" />
+        <forward name="fail" path="/WEB-INF/jsp/User/login.jsp" />
+        </action>
+        <action input="/WEB-INF/jsp/User/login.jsp" 
+                name="UserForm" 
+                path="/createUser" 
+                scope="request" 
+                 type="common.action.UserAction">
+        <forward name="success" path="/WEB-INF/jsp/User/homePage.jsp" />
+        <forward name="fail" path="/WEB-INF/jsp/User/login.jsp" />
+        </action>
+        <action input="/WEB-INF/jsp/User/editPersonalDtls.jsp" 
+                name="UserPersonalDtlForm" path="/saveUserPersonalDtl"
+                scope="request" type="user.action.UserPersonalDtlAction">
+  
+            <forward name="success" path="/WEB-INF/jsp/User/homePage.jsp" />
+        </action>
+         <action input="/WEB-INF/jsp/User/editContactDtl.jsp" 
+                name="UserContactDtlForm" path="/saveUserContactDtls"
+                scope="request" type="user.action.UserContactDtlAction">
+  
+            <forward name="success" path="/WEB-INF/jsp/User/homePage.jsp" />
+        </action>
+         <action input="/WEB-INF/jsp/User/editEducation.jsp" 
+                name="UserEducationDtlForm" path="/saveUserEducationDtl"
+                scope="request" type="user.action.UserEducationDtlAction">
+  
+            <forward name="success" path="/WEB-INF/jsp/User/homePage.jsp" />
+        </action>
+
+        
+        <!-- Anjana CodE ends -->
+        
+        
+        <action input="/WEB-INF/jsp/Me/Home/studHome.jsp" 
+                name="GDActionForm" 
+                path="/GroupDiscussion" 
+                scope="request" 
+                type="GroupDiscussion.GDAction">
+        <forward name="success" path="/WEB-INF/jsp/GD/gdEntry.jsp" />
+        </action>
+        <action input="/WEB-INF/jsp/GD/gdEntry.jsp" 
+                name="GDActionForm" 
+                path="/LoadDiscussion" 
+                scope="session"
+                parameter="method" 
+                type="GroupDiscussion.GDLoadAction">
+        <forward name="success" path="/WEB-INF/jsp/GD/groupDiscussion.jsp" />
+        </action>
+        <action  
+                name="GDActionForm" 
+                path="/PostGDMessage" 
+                scope="request" 
+                type="GroupDiscussion.GDPostMessage" 
+                validate="false" >
+        <forward name="success" path="/WEB-INF/jsp/GD/groupDiscussion.jsp" />
+        </action>
+        
+        <action path="/FileUpload" type="Action.FileUploadAction"/>
+        <action path="/GDVoteAction" type="GroupDiscussion.GDVoteAction"/>
+        <action input="/WEB-INF/jsp/GD/gdEntry.jsp"  
+                path="/GDCreateAction" 
+                type="GroupDiscussion.GDCreateAction" 
+                scope="request" />
+    
+    <!-- the Assignement Module Entries... -->
+    <action input="/WEB-INF/jsp/Me/Home/studHome.jsp" 
+                path="/theAssignment" 
+                scope="request" 
+            type="theAssignment.AssignmentAction"
+            form="AssignmentForm"
+        >
+    
+    <forward name="success" path="/WEB-INF/jsp/theAssignment/assignmentEntryFaculty.jsp" />
+    </action>
+   
+   <action input="/WEB-INF/jsp/Me/Home/studHome.jsp" 
+                path="/theAssignmentStudent" 
+                scope="request" 
+                type="theAssignment.AssignmentAction"
+                form="AssignmentForm"
+        >
+    <forward name="success" path="/WEB-INF/jsp/theAssignment/assignmentEntryStudent.jsp" />
+    </action>
+    
+                        
+    <!-- Forwards from Main menu of faculty assignment -->
+    
+    <action  path="/ManageGroups" 
+             type="theAssignment.ManageGroupAction" 
+             scope="request"
+             parameter="callmethod" 
+             name="AssignmentForm" >
+        <forward name="success" path="/WEB-INF/jsp/theAssignment/Faculty/ManageGroups.jsp" />
+        <forward name="edit" path="/WEB-INF/jsp/theAssignment/Faculty/ManageGroups/editGroup.jsp" />
+    </action>
+    
+    <action  path="/ManageGroupsStudent" 
+             type="theAssignment.ManageGroupStudentAction" 
+             scope="request"
+             parameter="callmethod" 
+             name="AssignmentForm" >
+        <forward name="success" path="/WEB-INF/jsp/theAssignment/Students/ManageGroupsStudent.jsp" />
+        <forward name="edit" path="/WEB-INF/jsp/theAssignment/Students/ManageGroups/editGroupStudent.jsp" />
+    </action>
+             
+                               
+    <action  path="/ManageAssignment"
+             type="theAssignment.AssignmentHandleAction" 
+             scope="request"
+             parameter="callmethod"
+             name="CreateAssgForm" >
+        <forward name="success" path="/WEB-INF/jsp/theAssignment/Faculty/CreateAssignment.jsp" />
+        <forward name="edit" path="/WEB-INF/jsp/theAssignment/Faculty/CreateAssignment/editAssignment.jsp" />
+    </action>
+    
+    <action  path="/ManageAssignmentStudent"
+             type="theAssignment.AssignmentHandleStudentAction" 
+             scope="request"
+             parameter="callmethod"
+             name="CreateAssgForm" >
+        <forward name="success" path="/WEB-INF/jsp/theAssignment/Students/ViewAssignmentStudent.jsp" />
+        <forward name="edit" path="/WEB-INF/jsp/theAssignment/Students/ViewAssignment/editAssignmentStudent.jsp" />
+    </action>
+    
+                                
+    <action  path="/EvaluateAssignment"
+             type="theAssignment.EvaluateAssignmentAction" 
+             scope="request"
+             parameter="callmethod"
+             name="EvaluateAssgForm" >
+        <forward name="success" path="/WEB-INF/jsp/theAssignment/Faculty/EvaluateAssignment.jsp" />
+        <forward name="edit" path="/WEB-INF/jsp/theAssignment/Faculty/EvaluateAssignment/evaluateDetail.jsp" />
+    </action>
+    
+    <action  path="/EvaluateAssignmentStudent"
+             type="theAssignment.EvaluateAssignmentStudentAction" 
+             scope="request"
+             parameter="callmethod"
+             name="EvaluateAssgForm" >
+        <forward name="success" path="/WEB-INF/jsp/theAssignment/Students/EvaluateAssignmentStudent.jsp" />
+        <forward name="edit" path="/WEB-INF/jsp/theAssignment/Students/EvaluateAssignmentStudent/evaluateDetailStudent.jsp" />
+    </action>
+    
+    
+    <action path="/CreateAssignment" type="theAssignment.AssignmentHandleAction" />
+    
+    
+    <action  path="/CreateQuiz"
+             type="theAssignment.QuizAction" 
+             scope="request"
+             parameter="callmethod"
+             name="QuizForm" >
+        <forward name="success" path="/WEB-INF/jsp/theAssignment/Faculty/CreateQuiz.jsp" />
+        <forward name="take" path="/WEB-INF/jsp/theAssignment/Faculty/CreateQuiz/takeQuiz.jsp" />
+        <forward name="quiz" path="/WEB-INF/jsp/theAssignment/Faculty/CreateQuiz/createQuestions.jsp" />
+        <forward name="edit" path="/WEB-INF/jsp/theAssignment/Faculty/CreateQuiz/editQuestion.jsp" />
+    </action>
+        
+    <action  path="/CreateQuizStudent"
+             type="theAssignment.QuizActionStudent" 
+             scope="request"
+             parameter="callmethod"
+             name="StudentQuizForm" >
+        <forward name="success" path="/WEB-INF/jsp/theAssignment/Students/CreateQuizStudent.jsp" />
+        <forward name="take" path="/WEB-INF/jsp/theAssignment/Students/CreateQuizStudent/takeQuiz.jsp" />
+        <forward name="quiz" path="/WEB-INF/jsp/theAssignment/Students/CreateQuizStudent/createQuestions.jsp" />
+        <forward name="edit" path="/WEB-INF/jsp/theAssignment/Students/CreateQuizStudent/editQuestion.jsp" />
+    </action>
+        
+    </action-mappings>
+    
+    
+    
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn" >
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  </struts-config>

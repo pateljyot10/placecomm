@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 8, 2013 10:32:16 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="hibernate.AssgGroupUser" table="assg_group_user" catalog="pathshala_db">
+        <id name="assgUsergroupId" type="java.lang.Integer">
+            <column name="assg_usergroup_id" />
+            <generator class="identity" />
+        </id>
+        <property name="assgGroupId" type="int">
+            <column name="assg_group_id" not-null="true" />
+        </property>
+        <property name="assgUserId" type="int">
+            <column name="assg_user_id" not-null="true" />
+        </property>
+        <property name="assgUserName" type="string">
+            <column name="assg_user_name" length="50" />
+        </property>
+        <property name="assgUsergroupIdHide" type="java.lang.Integer">
+            <column name="assg_usergroup_id_hide" />
+        </property>
+    </class>
+</hibernate-mapping>

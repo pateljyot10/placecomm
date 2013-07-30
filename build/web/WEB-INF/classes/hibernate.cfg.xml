@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/pathshala_db?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <mapping resource="hibernate/UserEducationDtls.hbm.xml"/>
+    <mapping resource="hibernate/CmnUserRoleRlt.hbm.xml"/>
+    <mapping resource="hibernate/QzQuestions.hbm.xml"/>
+    <mapping resource="hibernate/AssgGroupUser.hbm.xml"/>
+    <mapping resource="hibernate/UserPersonalDtls.hbm.xml"/>
+    <mapping resource="hibernate/AssgMst.hbm.xml"/>
+    <mapping resource="hibernate/AssgDtl.hbm.xml"/>
+    <mapping resource="hibernate/AssgSubmitMst.hbm.xml"/>
+    <mapping resource="hibernate/CmnRoleMst.hbm.xml"/>
+    <mapping resource="hibernate/UserContactDtls.hbm.xml"/>
+    <mapping resource="hibernate/ChatMsg.hbm.xml"/>
+    <mapping resource="hibernate/CmnElementMst.hbm.xml"/>
+    <mapping resource="hibernate/CmnRoleElementRlt.hbm.xml"/>
+    <mapping resource="hibernate/AssgEvaluateMst.hbm.xml"/>
+    <mapping resource="hibernate/QzQuizes.hbm.xml"/>
+    <mapping resource="hibernate/ChatPad.hbm.xml"/>
+    <mapping resource="hibernate/ChatUserVote.hbm.xml"/>
+    <mapping resource="hibernate/UserAchievementDtls.hbm.xml"/>
+    <mapping resource="hibernate/QzUsers.hbm.xml"/>
+    <mapping resource="hibernate/ChatUser.hbm.xml"/>
+    <mapping resource="hibernate/CmnRoleActivationMpg.hbm.xml"/>
+    <mapping resource="hibernate/AssgGroupMst.hbm.xml"/>
+    <mapping resource="hibernate/CmnUserMst.hbm.xml"/>
+    <mapping resource="hibernate/CmnUniversityMst.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

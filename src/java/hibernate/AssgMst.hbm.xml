@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 8, 2013 10:32:16 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="hibernate.AssgMst" table="assg_mst" catalog="pathshala_db">
+        <id name="assgId" type="java.lang.Integer">
+            <column name="assg_id" />
+            <generator class="identity" />
+        </id>
+        <property name="assgOwnerId" type="java.lang.Integer">
+            <column name="assg_owner_id">
+                <comment>UserId Simply</comment>
+            </column>
+        </property>
+        <property name="assgTitle" type="string">
+            <column name="assg_title" length="25" />
+        </property>
+        <property name="assgSubject" type="string">
+            <column name="assg_subject" length="50" />
+        </property>
+        <property name="assgDetails" type="string">
+            <column name="assg_details" length="80" />
+        </property>
+        <property name="assgDiscussionId" type="java.lang.Integer">
+            <column name="assg_discussion_id" />
+        </property>
+        <property name="assgSubmitType" type="java.lang.Integer">
+            <column name="assg_submit_type">
+                <comment>Text/File Upload</comment>
+            </column>
+        </property>
+        <property name="assgSubmitDate" type="timestamp">
+            <column name="assg_submit_date" length="19" />
+        </property>
+        <property name="assgSubmissionDetails" type="string">
+            <column name="assg_submission_details" length="300" />
+        </property>
+        <property name="assgFileUrl" type="string">
+            <column name="assg_file_url" length="300" />
+        </property>
+        <property name="assgIdHide" type="java.lang.Integer">
+            <column name="assg_id_hide" />
+        </property>
+        <property name="assgEvaluateIdHide" type="java.lang.Integer">
+            <column name="assg_evaluate_id_hide" />
+        </property>
+    </class>
+</hibernate-mapping>
