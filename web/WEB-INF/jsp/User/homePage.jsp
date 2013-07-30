@@ -141,15 +141,15 @@
         <div class="row">
         <div class="span3 bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav">
-                <li><a href="#block-download"><i class="icon-chevron-right"></i> Why Placecomm ?</a></li>
+                <li><a href="#block-why"><i class="icon-chevron-right"></i> Why Placecomm ?</a></li>
                 <li><a href="#block-download"><i class="icon-chevron-right"></i> Installation</a></li>
                 <li><a href="#block-documentation"><i class="icon-chevron-right"></i>Getting Started</a></li>
-                <li><a href="#block-installation"><i class="icon-chevron-right"></i> Data Storage & Seccurity</a></li>
+                <li><a href="#block-installation"><i class="icon-chevron-right"></i> Data Storage & Security</a></li>
             </ul>
         </div>
         <div class="span9">
             <!-- Download ================================================== -->
-            <section id="block-download">
+            <section id="block-why">
                 <div class="page-header">
                     <h1>Why Placecomm?</h1>
                 </div>
@@ -317,6 +317,52 @@ guidance to the Placement Committee in making strategic decisions.
                 </ol>
 
             </section>
+            
+            
+<section id="block-navigate">          
+    
+          <div class="page-header">
+                    <h1>Let's start working...</h1>
+          </div>
+             <div class="row-fluid">
+        <ul class="thumbnails">
+            <li class="span4">
+                <div class="thumbnail">
+                    <img data-src="holder.js/300x200" alt="300x200">
+                    <div class="caption">
+                        <h3>Companies</h3>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p><button class="ui-button-primary">View All</button><button>Add New</button></p>
+                    </div>
+                </div>
+            </li>
+            <li class="span4">
+                <div class="thumbnail">
+                    <img data-src="holder.js/300x200" alt="300x200">
+                    <div class="caption">
+                        <h3>HRs & Alumnis</h3>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p><button class="ui-button-primary">View All</button><button>Add New</button></p>
+                    </div>
+                </div>
+            </li>
+            <li class="span4">
+                <div class="thumbnail">
+                    <img data-src="holder.js/300x200" alt="300x200">
+                    <div class="caption">
+                        <h3>Storyboard</h3>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p><button class="ui-button-primary">View All</button><button>Add New</button></p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</section>
+            
+            
+            
         </div>
     </div>
 </div>
