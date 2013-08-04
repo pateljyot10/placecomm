@@ -85,7 +85,7 @@
                                     Alumni Leads <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                    <li><a tabindex="-1" href="./index.html">Add New Alumnis </a></li>
+                                    <li><html:link page="/AlumniHandler.do" tabindex="-1">Manage Alumni</html:link></li>
                                     <li><a tabindex="-1" href="theme/united/index.html">View/Edit Alumnis </a></li>
                                 </ul>
                             </li>

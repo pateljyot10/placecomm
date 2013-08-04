@@ -15,10 +15,20 @@
             <meta name="author" content="Addy Osmani">
 
             <!-- Le styles -->
-			<link rel="stylesheet" href="resources/assets/css/bootstrap.min.css">
-			<link rel="stylesheet" href="resources/css/custom-theme/jquery-ui-1.10.3.custom.css">
-            <link rel="stylesheet" href="resources/assets/css/font-awesome.min.css">
-            <link rel="stylesheet" href="resources/assets/css/icons.css">
+    <link rel="stylesheet" href="resources/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/custom-theme/jquery-ui-1.10.3.custom.css">
+    <link rel="stylesheet" href="resources/assets/css/font-awesome.min.css">
+    
+    <link href="http://utopiaadmin.themio.net/css/utopia-responsive.css" rel="stylesheet">
+    <link href="http://utopiaadmin.themio.net/css/ie.css" rel="stylesheet">
+    <link href="http://utopiaadmin.themio.net/css/social_icon/icons.css" rel="stylesheet" type="text/css"/>
+    <link href="http://utopiaadmin.themio.net/css/koottam/css/koottam.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="http://utopiaadmin.themio.net/js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://utopiaadmin.themio.net/js/jquery.cookie.js"></script>
+
+
+
             <!--[if IE 7]>
             <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
             <![endif]-->
@@ -125,8 +135,10 @@
                             
                         </ul>
                         <div id="twitter-share" class="pull-right">
-                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://addyosmani.github.com/jquery-ui-bootstrap/" data-text="A new jQuery UI Bootstrap theme" data-via="addyosmani" data-size="large">Tweet</a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://addyosmani.github.com/jquery-ui-bootstrap/" data-text="A new jQuery UI 
+Bootstrap theme" data-via="addyosmani" data-size="large">Tweet</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement
+(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                         </div>
                     </div>
                 </div>
@@ -136,12 +148,12 @@
 
         <!-- Subhead
         ================================================== -->
-        <header class="jumbotron subhead" id="overview" style="background-image: linear-gradient(-45deg, #B24926 0%, rgb(50, 100, 185) 
+        <header class="jumbotron subhead" id="overview" style="background-image: linear-gradient(-45deg, #B24926 0%, rgb(25, 102, 0) 
 100%)">
             <div class="container" >
                 <h1>Human Resources</h1>
                 <p class="lead">Add,Edit,Search,Delete,Classify & Sort HR Profiles</p>
-                <a data-toggle="modal" href="#myModal" class="btn btn-large btn-info" style="color: white"><i class="icon-plus-sign icon-
+                <a data-toggle="modal" href="#myModal" class="btn btn-large btn-success" style="color: white"><i class="icon-plus-sign icon-
 white"></i> Add HR Profile</a>
             </div>
         </header>
@@ -164,15 +176,16 @@ white"></i> Add HR Profile</a>
                                 <tr>
                                     <th></th>
                                     <th>HR Name</th>
+                                    <th>Company</th>
                                     <th>Designation</th>
                                     <th>Telephone</th>
                                     <th>Mobile</th>
                                     <th>Email ID</th>
                                     <th>Fax ID</th>
                                     <th>Address</th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
+                                    <th>Link</th>
+                                    <th>Link</th>
+                                    <th>Link</th>
                                     <th>Other Details</th>
                                     
                                 </tr>
@@ -182,6 +195,7 @@ white"></i> Add HR Profile</a>
                                 <tr>
                                     <td> <input type="checkbox" name="checkboxes" value="Option one"></td>    
                                         <td>Mr Ashok L. Patel</td>
+                                        <td>TCS</td>
                                         <td>Manager-HR</td>
                                         <td>021-2584420</td>
                                         <td>9429500361</td>
@@ -260,99 +274,134 @@ white"></i> Add HR Profile</a>
     </div>
 </footer>
 
-  <div class="modal fade" id="myModal" style="z-index: 1500">
+  <div class="modal fade" id="myModal" style="display:none">
     <div class="modal-dialog" style="z-index: 901" >
       <div class="modal-content" style="z-index: 902">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Add Recruiters</h4>
+          <h4 class="modal-title">Add HR Profiles</h4>
         </div>
-        <form class="form-horizontal">
+          <form class="form-horizontal">
           <div class="modal-body">
           
 <fieldset>
+<div class="control-group">
+  <label class="control-label" for="hrName">HR Name</label>
+  <div class="controls">
+    <input id="hrName" name="hrName" type="text" placeholder="Enter the Name of Lead" class="input-large" required="">
+    
+  </div>
+</div>
 
-<!-- Form Name -->
-
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="hrCompany">Select Company</label>
+  <div class="controls">
+    <select id="hrCompany" name="hrCompany" class="input-large">
+      <option>TCS</option>
+      <option>Cognizant</option>
+      <option>Infosys</option>
+      <option>Accenture</option>
+      <option>IBM</option>
+      <option>Google</option>
+      <option>Microsoft</option>
+    </select>
+  </div>
+</div>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label">Title</label>
+  <label class="control-label" for="hrDesignation">Designation</label>
   <div class="controls">
-    <input id="companyTitle" name="companyTitle" type="text" placeholder="e.g. Tata Consultancy Services Pvt Ltd" class="input-xlarge" required="">
+    <input id="hrDesignation" name="hrDesignation" type="text" placeholder="e.g. Manager-HR" class="input-large">
     
   </div>
 </div>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label">3-Digit Code</label>
+  <label class="control-label" for="hrTelephone">Telephone</label>
   <div class="controls">
-    <input id="companyCode" name="companyCode" type="text" placeholder="E.g. TCS" class="input-xlarge" required="">
+    <input id="hrTelephone" name="hrTelephone" type="text" placeholder="e.g. 079-1234564" class="input-large">
     
   </div>
 </div>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label">Contact Person</label>
+  <label class="control-label" for="hrMobile">Mobile</label>
   <div class="controls">
-    <input id="contactPerson" name="contactPerson" type="text" placeholder="Primary Contact Person" class="input-xlarge">
+    <input id="hrMobile" name="hrMobile" type="text" placeholder="e.g. 9876543210" class="input-large">
     
   </div>
 </div>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label">Contact Number</label>
+  <label class="control-label" for="hrEmail">Email ID</label>
   <div class="controls">
-    <input id="contactNumber" name="contactNumber" type="text" placeholder="e.g. 9876543210" class="input-xlarge">
+    <input id="hrEmail" name="hrEmail" type="text" placeholder="e.g. jyotpatel.imnu@gmail.com" class="input-large">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="hrFax">Fax ID</label>
+  <div class="controls">
+    <input id="hrFax" name="hrFax" type="text" placeholder="" class="input-large">
     
   </div>
 </div>
 
 <!-- Textarea -->
 <div class="control-group">
-  <label class="control-label">Contact Address</label>
+  <label class="control-label" for="hrAddr">Address</label>
   <div class="controls">                     
-    <textarea id="contactAddress" name="contactAddress"></textarea>
+    <textarea id="hrAddr" name="hrAddr"></textarea>
   </div>
 </div>
 
-<!-- Text input-->
+<!-- Textarea -->
 <div class="control-group">
-  <label class="control-label">Email</label>
+  <label class="control-label" for="hrOtherDetails">Other Details</label>
+  <div class="controls">                     
+    <textarea id="hrOtherDetails" name="hrOtherDetails"></textarea>
+  </div>
+</div>
+
+<!-- Prepended text-->
+<div class="control-group">
+  <label class="control-label" for="fbLink">Facebook Link</label>
   <div class="controls">
-    <input id="contactEmail" name="contactEmail" type="text" placeholder="xxx@xxx.com" class="input-xlarge">
+    <div class="input-prepend">
+      <span class="add-on">www.facebook.com/</span>
+      <input id="fbLink" name="fbLink" class="input-small"  type="text">
+    </div>
     
   </div>
 </div>
 
-<!-- Text input-->
 <div class="control-group">
-  <label class="control-label">Location</label>
+  <label class="control-label" for="twitterLink">Twitter Link</label>
   <div class="controls">
-    <input id="companyLocation" name="companyLocation" type="text" placeholder="e.g. Banglore" class="input-xlarge" required="">
+    <div class="input-prepend">
+      <span class="add-on">www.twitter.com/</span>
+      <input id="twitterLink" name="twitterLink" class="input-small"  type="text">
+    </div>
     
   </div>
 </div>
 
-<!-- Multiple Radios -->
+
 <div class="control-group">
-  <label class="control-label">Priority</label>
+  <label class="control-label" for="linkedinLink">LinkedIn Link</label>
   <div class="controls">
-    <label class="radio">
-      <input type="radio" name="companyPriority" value="Low" checked="checked">
-      Low
-    </label>
-    <label class="radio">
-      <input type="radio" name="companyPriority" value="Medium">
-      Medium
-    </label>
-    <label class="radio">
-      <input type="radio" name="companyPriority" value="High">
-      High
-    </label>
+    <div class="input-prepend">
+      <span class="add-on">www.LinkedIn.com/</span>
+      <input id="linkedinLink" name="linkedinLink" class="input-small"  type="text">
+    </div>
+    
   </div>
 </div>
 
@@ -391,11 +440,25 @@ white"></i> Add HR Profile</a>
 </script>
 
 
+
+
+
+
+
+
 <script type="text/javascript" src="resources/js1/u/jquery.min.js"></script>
 
 <script type="text/javascript" src="resources/js1/u/utopia.js"></script>
 <script type="text/javascript" src="resources/js1/u/jquery.datatable.js"></script>
 <script type="text/javascript" src="resources/js1/u/tables.js"></script>
+<script type="text/javascript" src="resources/css/utopia-white.css"></script>
+
+    <script type="text/javascript" src="http://utopiaadmin.themio.net/js/koottam/js/jquery.koottam.js"></script>
+    <script type="text/javascript" src="http://utopiaadmin.themio.net/js/api.js"></script>
+    <script type="text/javascript" src="http://utopiaadmin.themio.net/js/header.js?v1"></script>
+    <script type="text/javascript" src="http://utopiaadmin.themio.net/js/sidebar.js"></script>
+
+
 
 </body>
 </html>

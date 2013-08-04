@@ -362,6 +362,9 @@
 <script src="resources/assets/js/google-code-prettify/prettify.js"></script>
 <script src="resources/assets/js/docs.js"></script>
 <script src="resources/assets/js/demo.js"></script>
+
+<!-- REPLACE THIS WITH ALREADY EXISTING PATHS OF THE FILES -->
+
 <script type="text/javascript" src="resources/js1/u/utopia.js"></script>
 <script type="text/javascript" src="resources/js1/u/jquery.min.js"></script>
 <script type="text/javascript" src="resources/js1/u/jquery.datatable.js"></script>

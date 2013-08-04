@@ -9,15 +9,26 @@
 
         <head>
             <meta charset="utf-8">
-            <title>Company Database</title>
+            <title>Alumni Leads</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="description" content="A preview of the jQuery UI Bootstrap theme.">
             <meta name="author" content="Addy Osmani">
 
             <!-- Le styles -->
-			<link rel="stylesheet" href="resources/assets/css/bootstrap.min.css">
-			<link rel="stylesheet" href="resources/css/custom-theme/jquery-ui-1.10.3.custom.css">
-            <link rel="stylesheet" href="resources/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/custom-theme/jquery-ui-1.10.3.custom.css">
+    <link rel="stylesheet" href="resources/assets/css/font-awesome.min.css">
+    
+    <link href="http://utopiaadmin.themio.net/css/utopia-responsive.css" rel="stylesheet">
+    <link href="http://utopiaadmin.themio.net/css/ie.css" rel="stylesheet">
+    <link href="http://utopiaadmin.themio.net/css/social_icon/icons.css" rel="stylesheet" type="text/css"/>
+    <link href="http://utopiaadmin.themio.net/css/koottam/css/koottam.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="http://utopiaadmin.themio.net/js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://utopiaadmin.themio.net/js/jquery.cookie.js"></script>
+
+
+
             <!--[if IE 7]>
             <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
             <![endif]-->
@@ -41,7 +52,7 @@
 
         </head>
 
-        <body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true">
+        <body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true" style="z-index:1800">
 
         <!-- Navbar
         ================================================== -->
@@ -53,7 +64,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">CampusLive</a>
+                    <a class="brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">Placecomm</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
                             <li >
@@ -74,8 +85,8 @@
                                     HR Leads <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                    <li><a tabindex="-1" href="./index.html">Add New HRs</a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">View/Edit HRs</a></li>
+                                    <li><a tabindex="-1" href="./index.html">Manage HRs</a></li>
+                                    <li><a tabindex="-1" href="theme/united/index.html">Learn about HRs</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -83,8 +94,8 @@
                                     Alumni Leads <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                    <li><a tabindex="-1" href="./index.html">Add New Alumnis </a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">View/Edit Alumnis </a></li>
+                                    <li><a tabindex="-1" href="./index.html">Manage Alumni </a></li>
+                                    <li><a tabindex="-1" href="theme/united/index.html">Learn About Alumni </a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -124,8 +135,10 @@
                             
                         </ul>
                         <div id="twitter-share" class="pull-right">
-                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://addyosmani.github.com/jquery-ui-bootstrap/" data-text="A new jQuery UI Bootstrap theme" data-via="addyosmani" data-size="large">Tweet</a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://addyosmani.github.com/jquery-ui-bootstrap/" data-text="A new jQuery UI 
+Bootstrap theme" data-via="addyosmani" data-size="large">Tweet</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement
+(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                         </div>
                     </div>
                 </div>
@@ -135,13 +148,16 @@
 
         <!-- Subhead
         ================================================== -->
-        <header class="jumbotron subhead" id="overview" style="background-image: linear-gradient(45deg, #B24926 0%, rgb(170, 150,200) 100%)">
+        <header class="jumbotron subhead" id="overview" style="background-image: linear-gradient(45deg, #404926 0%, rgb(255, 128, 0) 
+100%)">
             <div class="container" >
-                <h1>Recruiters</h1>
-                <p class="lead">Add,Edit,Search,Delete,Classify & Sort Recruiters</p>
-                <a data-toggle="modal" href="#myModal" class="btn btn-large btn-danger" style="color: white"><i class="icon-plus-sign icon-white"></i> Add Company</a>
+                <h1>Alumni Relations</h1>
+                <p class="lead">Add,Edit,Search,Delete,Classify & Sort Alumni Profiles</p>
+                <a data-toggle="modal" href="#myModal" class="btn btn-large btn-inverse" style="color: white"><i class="icon-plus-sign icon-
+white"></i> Add Alumni Profile</a>
             </div>
         </header>
+
 
 <br/>
         <div class="container">
@@ -158,32 +174,50 @@
                             <thead>
 
                                 <tr>
-                                    <td></td>
-                                    <th>Name</th>
-                                    <th>Code</th>
-                                    <th>Contact Person</th>
-                                    <th>Contact Number</th>
+                                    <th></th>
+                                    <th>Alumni Name</th>
+                                    <th>Company</th>
+                                    <th>Designation</th>
+                                    <th>Batch</th>
+                                    <th>Telephone</th>
+                                    <th>Mobile</th>
+                                    <th>Email ID</th>
+                                    <th>Fax ID</th>
                                     <th>Address</th>
-                                    <th>Email</th>
-                                    <th>Location</th>
-                                    <th>Priority</th>
-                                    <th>Edit</th>
+                                    <th>Link</th>
+                                    <th>Link</th>
+                                    <th>Link</th>
+                                    <th>Other Details</th>
+                                    
                                 </tr>
                             </thead>
 
                             <tbody>
                                 <tr>
-                                    <td> <input type="checkbox" name="checkboxes" value="Option one"></td>    
-                                        <td>Tata Consultancy Services</td>
+                                    <td> <input type="checkbox" name="checkboxes" value=""></td>    
+                                        <td>Mr Jyot Patel</td>
                                         <td>TCS</td>
-                                        <td>Mr. Neeraj Arora</td>
-                                        <td>123456789</td>
-                                        <td>IMNU Nirma, Gota, Ahmedabad</td>
-                                        <td>narora@imnu.ac.in</td>
-                                        <td>Ahmedabad</td>
-                                        <td>High</td>
-                                        <td><a href="http://utopiaadmin.themio.net/dashboard.html#"><i class="icon-pencil"></i></a></td>
-                                </tr>
+                                        <td>Project Delivery Head</td>
+                                        <td class="more">2012-14</td>
+                                        <td>021-2584420</td>
+                                        <td>9429500361</td>
+                                        <td class="more">JYOTPATEL.IMNU@GMAIL.COM</td>
+                                        <td>079-2587748</td>
+                                        <td>Infocity, Gandhinagar</td>
+                                        <td><div class="social-box-icon">
+                                                <a href="http://www.facebook.com" class="zocial icon facebook" target="_blank">Sign in with Facebook</a>
+                                            </div>    
+                                        </td>
+                                        <td><div class="social-box-icon">
+                                                <a href="http://www.twitter.com" class="zocial icon twitter" target="_blank">Sign in with Facebook</a>
+                                            </div>    
+                                        </td>
+                                        <td><div class="social-box-icon">
+                                                <a href="http://www.linkedin.com" class="zocial icon linkedin"  target="_blank">Sign in with Facebook</a>
+                                            </div>    
+                                        </td>
+                                        <td class="more">Can help Call TCS for Internship/Placements dc ec cewc ewc ewcew cew c ewc  ew c wec ewc ew cew  c we c we  cwe c ew c ewc  ew c we  cew c we c ew  ce </td>
+                                    </tr>
                                 
 
                             </tbody>
@@ -242,101 +276,142 @@
     </div>
 </footer>
 
-
- <!-- Modal -->
-  <div class="modal fade" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
+  <div class="modal fade" id="myModal" style="display:none">
+    <div class="modal-dialog" style="z-index: 901" >
+      <div class="modal-content" style="z-index: 902">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Add Recruiters</h4>
+          <h4 class="modal-title">Add Alumni Profiles</h4>
         </div>
-        <form class="form-horizontal">
+          <form class="form-horizontal">
           <div class="modal-body">
           
 <fieldset>
+<div class="control-group">
+  <label class="control-label" for="alumniName">Alumni Name</label>
+  <div class="controls">
+    <input id="alumniName" name="alumniName" type="text" placeholder="Enter the Name of Alumni" class="input-large" required="">
+    
+  </div>
+</div>
 
-<!-- Form Name -->
-
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="alumniCompany">Select Company</label>
+  <div class="controls">
+    <select id="alumniCompany" name="alumniCompany" class="input-large">
+      <option>TCS</option>
+      <option>Cognizant</option>
+      <option>Infosys</option>
+      <option>Accenture</option>
+      <option>IBM</option>
+      <option>Google</option>
+      <option>Microsoft</option>
+    </select>
+  </div>
+</div>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label">Title</label>
+  <label class="control-label" for="alumniDesignation">Designation</label>
   <div class="controls">
-    <input id="companyTitle" name="companyTitle" type="text" placeholder="e.g. Tata Consultancy Services Pvt Ltd" class="input-xlarge" required="">
+    <input id="alumniDesignation" name="alumniDesignation" type="text" placeholder="e.g. Manager-HR" class="input-large">
     
   </div>
 </div>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label">3-Digit Code</label>
+  <label class="control-label" for="alumniBatch">Batch</label>
   <div class="controls">
-    <input id="companyCode" name="companyCode" type="text" placeholder="E.g. TCS" class="input-xlarge" required="">
+    <input id="alumniBatch" name="alumniBatch" type="text" placeholder="e.g. 2012-14" class="input-large">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="alumniTelephone">Telephone</label>
+  <div class="controls">
+    <input id="alumniTelephone" name="alumniTelephone" type="text" placeholder="e.g. 079-1234564" class="input-large">
     
   </div>
 </div>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label">Contact Person</label>
+  <label class="control-label" for="alumniMobile">Mobile</label>
   <div class="controls">
-    <input id="contactPerson" name="contactPerson" type="text" placeholder="Primary Contact Person" class="input-xlarge">
+    <input id="alumniMobile" name="alumniMobile" type="text" placeholder="e.g. 9876543210" class="input-large">
     
   </div>
 </div>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label">Contact Number</label>
+  <label class="control-label" for="alumniEmail">Email ID</label>
   <div class="controls">
-    <input id="contactNumber" name="contactNumber" type="text" placeholder="e.g. 9876543210" class="input-xlarge">
+    <input id="alumniEmail" name="alumniEmail" type="text" placeholder="e.g. jyotpatel.imnu@gmail.com" class="input-large">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="alumniFax">Fax ID</label>
+  <div class="controls">
+    <input id="alumniFax" name="alumniFax" type="text" placeholder="" class="input-large">
     
   </div>
 </div>
 
 <!-- Textarea -->
 <div class="control-group">
-  <label class="control-label">Contact Address</label>
+  <label class="control-label" for="alumniAddr">Address</label>
   <div class="controls">                     
-    <textarea id="contactAddress" name="contactAddress"></textarea>
+    <textarea id="alumniAddr" name="alumniAddr"></textarea>
   </div>
 </div>
 
-<!-- Text input-->
+<!-- Textarea -->
 <div class="control-group">
-  <label class="control-label">Email</label>
+  <label class="control-label" for="alumniOtherDetails">Other Details</label>
+  <div class="controls">                     
+    <textarea id="alumniOtherDetails" name="alumniOtherDetails"></textarea>
+  </div>
+</div>
+
+<!-- Prepended text-->
+<div class="control-group">
+  <label class="control-label" for="fbLink">Facebook Link</label>
   <div class="controls">
-    <input id="contactEmail" name="contactEmail" type="text" placeholder="xxx@xxx.com" class="input-xlarge">
+    <div class="input-prepend">
+      <span class="add-on">www.facebook.com/</span>
+      <input id="fbLink" name="fbLink" class="input-small"  type="text">
+    </div>
     
   </div>
 </div>
 
-<!-- Text input-->
 <div class="control-group">
-  <label class="control-label">Location</label>
+  <label class="control-label" for="twitterLink">Twitter Link</label>
   <div class="controls">
-    <input id="companyLocation" name="companyLocation" type="text" placeholder="e.g. Banglore" class="input-xlarge" required="">
+    <div class="input-prepend">
+      <span class="add-on">www.twitter.com/</span>
+      <input id="twitterLink" name="twitterLink" class="input-small"  type="text">
+    </div>
     
   </div>
 </div>
 
-<!-- Multiple Radios -->
+
 <div class="control-group">
-  <label class="control-label">Priority</label>
+  <label class="control-label" for="linkedinLink">LinkedIn Link</label>
   <div class="controls">
-    <label class="radio">
-      <input type="radio" name="companyPriority" value="Low" checked="checked">
-      Low
-    </label>
-    <label class="radio">
-      <input type="radio" name="companyPriority" value="Medium">
-      Medium
-    </label>
-    <label class="radio">
-      <input type="radio" name="companyPriority" value="High">
-      High
-    </label>
+    <div class="input-prepend">
+      <span class="add-on">www.LinkedIn.com/</span>
+      <input id="linkedinLink" name="linkedinLink" class="input-small"  type="text">
+    </div>
+    
   </div>
 </div>
 
@@ -356,6 +431,7 @@
   </div><!-- /.modal -->
 
 
+
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="resources/assets/js/jquery-1.9.0.min.js"></script>
 <script src="resources/assets/js/bootstrap.min.js"></script>
@@ -365,25 +441,44 @@
 <script src="resources/assets/js/docs.js"></script>
 <script src="resources/assets/js/demo.js"></script>
 <script type="text/javascript" src="resources/js1/u/utopia.js"></script>
-     
+<script type="text/javascript" src="resources/assets/js/module/placecomm/jquery.easyModal.js"></script>     
+<script type="text/javascript" src="resources/assets/js/module/placecomm/jquery.shorten.js"></script>     
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" />
+<script type="text/javascript">
+
+$(function() {
+
+    $(".more").shorten({
+                
+		width: 40,
+		tail: ' <a href="#">more</a>',
+		tooltip: true
+	});
+
+    });
+
+</script>
 
 
-<script type="text/javascript" src="resources/js/u/jquery.min.js"></script>
 
-<script type="text/javascript" src="resources/js/u/utopia.js"></script>
-<script type="text/javascript" src="resources/js/u/jquery.datatable.js"></script>
-<script type="text/javascript" src="resources/js/u/tables.js"></script>
-<script type="text/javascript" src="resources/js/u/datepicker.js"></script>
-<script type="text/javascript" src="resources/js/u/maskedinput.js"></script>
-<script type="text/javascript" src="resources/js/u/chosen.jquery.js"></script>
 
-<script type="text/javascript" src="resources/js/noty/jquery.noty.js"></script>
-<script type="text/javascript" src="resources/js/noty/layouts/top.js"></script>
-<script type="text/javascript" src="resources/js/noty/layouts/topLeft.js"></script>
-<script type="text/javascript" src="resources/js/noty/layouts/topRight.js"></script>
-<script type="text/javascript" src="resources/js/noty/themes/default.js"></script>
-<script type="text/javascript" src="resources/js/assignmentPage.js"></script>
-<script type="text/javascript" src="resources/js/validate/jquery.validationEngine.js"></script>
-<script type="text/javascript" src="resources/js/validate/jquery.validationEngine-en.js"></script>
+
+
+
+
+<script type="text/javascript" src="resources/js1/u/jquery.min.js"></script>
+
+<script type="text/javascript" src="resources/js1/u/utopia.js"></script>
+<script type="text/javascript" src="resources/js1/u/jquery.datatable.js"></script>
+<script type="text/javascript" src="resources/js1/u/tables.js"></script>
+<script type="text/javascript" src="resources/css/utopia-white.css"></script>
+
+    <script type="text/javascript" src="http://utopiaadmin.themio.net/js/koottam/js/jquery.koottam.js"></script>
+    <script type="text/javascript" src="http://utopiaadmin.themio.net/js/api.js"></script>
+    <script type="text/javascript" src="http://utopiaadmin.themio.net/js/header.js?v1"></script>
+    <script type="text/javascript" src="http://utopiaadmin.themio.net/js/sidebar.js"></script>
+
+
+
 </body>
 </html>

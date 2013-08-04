@@ -237,7 +237,8 @@
                  forward="/WEB-INF/jsp/placecomm/company.jsp" />
     <action  path="/HRHandler" name="StudentQuizForm"
                  forward="/WEB-INF/jsp/placecomm/hr.jsp" />
-    
+    <action  path="/AlumniHandler" name="StudentQuizForm"
+                 forward="/WEB-INF/jsp/placecomm/alumni.jsp" />
     
           
                 
