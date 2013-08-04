@@ -53,5 +53,13 @@
     <put name="faculty-header" value="/WEB-INF/jsp/Templates/faculty-header.jsp"/>    
     </definition>
     
+    
+    <definition name="project-template-placecomm-header" path="/WEB-INF/jsp/tiles/layout_placecomm_header.jsp" >
+    <put name="placecomm-header" value="/WEB-INF/jsp/tiles/placecomm_header.jsp"/>    
+    </definition>
+
+    <definition name="project-template-placecomm-footer" path="/WEB-INF/jsp/tiles/layout_placecomm_footer.jsp" >
+    <put name="placecomm-footer" value="/WEB-INF/jsp/tiles/placecomm_footer.jsp"/>    
+    </definition>
 
 </tiles-definitions>

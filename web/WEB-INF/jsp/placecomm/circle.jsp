@@ -28,7 +28,13 @@
 </head>
 
 <body>
-<div class="spinner"><div><div></div></div></div>
+
+    
+        <tiles:insert definition="project-template-placecomm-header" >
+                    <tiles:put name="placecomm-header" value="/WEB-INF/jsp/tiles/placecomm_header.jsp" />
+                </tiles:insert>  
+    
+    <div class="spinner"><div><div></div></div></div>
 <div class="extra">
 		<div class="main">
 			<!--header -->

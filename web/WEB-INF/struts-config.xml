@@ -240,8 +240,9 @@
     <action  path="/AlumniHandler" name="StudentQuizForm"
                  forward="/WEB-INF/jsp/placecomm/alumni.jsp" />
     
-          
-                
+          <action  path="/Initialize" 
+                         forward="/WEB-INF/jsp/User/homePage.jsp" />    
+            
     </action-mappings>
     
     

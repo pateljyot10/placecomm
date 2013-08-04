@@ -4,6 +4,7 @@
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
+<%@taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,96 +55,16 @@
 
         <body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true" style="z-index:1800">
 
-        <!-- Navbar
+        
+           
+            
+            <!-- Navbar
+        
         ================================================== -->
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">Placecomm</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li >
-                                <a href="./index.html">Home</a>
-                            </li>
-                            <li class="dropdown active">
-                                <a href="/navigation.do" class="dropdown-toggle" data-toggle="dropdown">
-                                    Recruiters <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                    
-                                    <li><html:link page="/NevigationHandler.do" tabindex="-1">Manage Recruiters</html:link></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">Learn about Recruiters</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    HR Leads <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                    <li><a tabindex="-1" href="./index.html">Manage HRs</a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">Learn about HRs</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    Alumni Leads <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                    <li><a tabindex="-1" href="./index.html">Manage Alumni </a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">Learn About Alumni </a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    Stories <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                    <li><a tabindex="-1" href="./index.html">Calling & Appointment</a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">Custom Stories</a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">Interest Invites</a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">Interview Scheduling</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    Plan <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                    <li><a tabindex="-1" href="./index.html">Resource Utilization</a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">Performance Indicators</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    Placecomms <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                    <li><a tabindex="-1" href="./index.html">Jyot Patel</a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">Arpen Vora</a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">Syed Shoeb</a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">Bhushan Zalavadia</a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">Saurabh Kumar</a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">Natali Mathew</a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">Vanditha Ravi</a></li>
-                                </ul>
-                            </li>
-                            
-                        </ul>
-                        <div id="twitter-share" class="pull-right">
-                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://addyosmani.github.com/jquery-ui-bootstrap/" data-text="A new jQuery UI 
-Bootstrap theme" data-via="addyosmani" data-size="large">Tweet</a>
-                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement
-(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
+        <tiles:insert definition="project-template-placecomm-header" >
+                    <tiles:put name="placecomm-header" value="/WEB-INF/jsp/tiles/placecomm_header.jsp" />
+                </tiles:insert>  
 
 
         <!-- Subhead
@@ -245,35 +166,11 @@ white"></i> Add Alumni Profile</a>
 <!-- Footer
 ================================================== -->
 <footer class="footer">
-    <div class="container">
-        <div class="row">
-          <div class="span3">
-            <h3><span class="icon-envelope"></span> Contact</h3>
-            <ul class="icons">
-              <li><i class="icon-link"></i> Blog: <a class="targetblank" href="http://addyosmani.com/blog/">Jyot Patel</a></li>
-              <li><i class="icon-twitter"></i> Twitter: <a class="targetblank" href="https://twitter.com/addyosmani">@jyotpatel</a></li>
-              <li><i class="icon-github"></i> Github: <a class="targetblank" href="https://github.com/addyosmani/jquery-ui-bootstrap/issues?state=open">Issues</a></li>
-            </ul>
-          </div>
-          <div class="span9">
-            <div class="span4">
-                <h3><span class="icon-group"></span> Team</h3>
-                <ul class="unstyled">
-                    <li>Lead Product Developer : <a class="targetblank" href="http://addyosmani.com/blog/" hreflang="en">Anjana Suvariya</a></li>
-                    <li>Chief Product Designer : <a class="targetblank" href="http://blog.aurelien-gerits.be" hreflang="fr">Jyot Patel</a></li>
-                </ul>
-            </div>
-            <div class="span4">
-                <h3><span class="icon-lightbulb"></span> Credits</h3>
-                <ul class="unstyled">
-                    <li>jQuery UI Bootstrap &copy; <strong class="text-info">Addy Osmani</strong> 2012 - 2013.</li>
-                    <li>Twitter Bootstrap &copy; <strong class="text-info">Twitter</strong> 2012 - 2013</li>
-                    <li>Nirma University &copy; <strong class="text-info">IMNU</strong> 2012 - 2014</li>
-                </ul>
-            </div>
-          </div>
-        </div>
-    </div>
+    
+        <tiles:insert definition="project-template-placecomm-footer" >
+                    <tiles:put name="placecomm-footer" value="/WEB-INF/jsp/tiles/placecomm_footer.jsp" />
+                </tiles:insert>    
+    
 </footer>
 
   <div class="modal fade" id="myModal" style="display:none">
