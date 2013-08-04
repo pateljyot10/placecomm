@@ -1,6 +1,14 @@
+<%@page contentType="text/html"%>
+<%@page pageEncoding="UTF-8"%>
 
+<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
+<%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
+<%@taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles" %>
 <!DOCTYPE html>
-        <html lang="en">
+<html>
+
+        
         <head>
             <meta charset="utf-8">
             <title>Welcome, Username :::</title>
@@ -10,7 +18,7 @@
 
             <!-- Le styles -->
 			<link rel="stylesheet" href="resources/assets/css/bootstrap.min.css">
-			<link rel="stylesheet" href="resources/css/custom-theme/jquery-ui-1.10.2.custom.css">
+			<link rel="stylesheet" href="resources/css/custom-theme/jquery-ui-1.10.3.custom.css">
             <link rel="stylesheet" href="resources/assets/css/font-awesome.min.css">
             <!--[if IE 7]>
             <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
@@ -55,11 +63,11 @@
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    Company <b class="caret"></b>
+                                    Recruiters <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                    <li><a tabindex="-1" href="./index.html">Add New Companies</a></li>
-                                    <li><a tabindex="-1" href="theme/united/index.html">View/Edit Companies</a></li>
+                               <li><html:link page="/NevigationHandler.do" tabindex="-1">Manage Recruiters</html:link></li>
+                                    <li><a tabindex="-1" href="theme/united/index.html">Learn about Recruiters</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -67,7 +75,8 @@
                                     HR Leads <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                    <li><a tabindex="-1" href="./index.html">Add New HRs</a></li>
+                                    
+                                    <li><html:link page="/HRHandler.do" tabindex="-1">Manage Recruiters</html:link></li>
                                     <li><a tabindex="-1" href="theme/united/index.html">View/Edit HRs</a></li>
                                 </ul>
                             </li>
@@ -145,6 +154,7 @@
                 <li><a href="#block-download"><i class="icon-chevron-right"></i> Installation</a></li>
                 <li><a href="#block-documentation"><i class="icon-chevron-right"></i>Getting Started</a></li>
                 <li><a href="#block-installation"><i class="icon-chevron-right"></i> Data Storage & Security</a></li>
+                <li><a href="#block-start"><i class="icon-chevron-right"></i> Start Working</a></li>
             </ul>
         </div>
         <div class="span9">
@@ -319,7 +329,7 @@ guidance to the Placement Committee in making strategic decisions.
             </section>
             
             
-<section id="block-navigate">          
+<section id="block-start">          
     
           <div class="page-header">
                     <h1>Let's start working...</h1>
@@ -328,31 +338,36 @@ guidance to the Placement Committee in making strategic decisions.
         <ul class="thumbnails">
             <li class="span4">
                 <div class="thumbnail">
-                    <img data-src="holder.js/300x200" alt="300x200">
+                    <img src="resources/img/module/placecomm/company.jpg" alt="300x200">
                     <div class="caption">
                         <h3>Companies</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><button class="ui-button-primary">View All</button><button>Add New</button></p>
+                        <p>Our Database services help you work with data of thousands of organizations at a click. Also, it allows one to search flexibly and sort whenever necessary.</p>
+                        <p>
+                        <p><button class="ui-button-primary ui-button-warning">Explore</button><button class="ui-button-primary ui-button-info">Documentation</button></p>
+                        </p>
                     </div>
                 </div>
             </li>
             <li class="span4">
                 <div class="thumbnail">
-                    <img data-src="holder.js/300x200" alt="300x200">
+                    <img src="resources/img/module/placecomm/hr.jpg" alt="300x200">
                     <div class="caption">
+                        <br/>
                         <h3>HRs & Alumnis</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><button class="ui-button-primary">View All</button><button>Add New</button></p>
+                        
+                        <p>Market Research says HR and Alumnis are the greatest stimulators for the placements. Keep in continous touch with them. </p>
+                        <p><button class="ui-button-primary ui-button-warning">View All</button><button class="ui-button-primary ui-button-info">Add New</button></p>
                     </div>
                 </div>
             </li>
             <li class="span4">
                 <div class="thumbnail">
-                    <img data-src="holder.js/300x200" alt="300x200">
+                    <img src="resources/img/module/placecomm/story.jpg" alt="300x200" >
                     <div class="caption">
+                        <br/>
                         <h3>Storyboard</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><button class="ui-button-primary">View All</button><button>Add New</button></p>
+                        <p>Want to look after what all is going on into the Placecomm ? Use this storyboard for managing daily operational activities.</p>
+                        <p><button class="ui-button-primary ui-button-warning">View All</button><button class="ui-button-primary ui-button-info">Add New</button></p>
                     </div>
                 </div>
             </li>
@@ -404,7 +419,7 @@ guidance to the Placement Committee in making strategic decisions.
 <script src="resources/assets/js/jquery-1.9.0.min.js"></script>
 <script src="resources/assets/js/bootstrap.min.js"></script>
 <script src="resources/assets/js/holder.js"></script>
-<script src="resources/assets/js/jquery-ui-1.10.0.custom.min.js"></script>
+<script src="resources/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
 <script src="resources/assets/js/google-code-prettify/prettify.js"></script>
 <script src="resources/assets/js/docs.js"></script>
 <script src="resources/assets/js/demo.js"></script>

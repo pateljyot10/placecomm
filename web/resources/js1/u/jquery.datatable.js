@@ -1960,7 +1960,7 @@
 
             var nFilter = document.createElement( 'div' );
             nFilter.className = oSettings.oClasses.sFilter;
-            nFilter.innerHTML = '<label>'+sSearchStr+'</label>';
+            nFilter.innerHTML = '<label style="text-indent:50%" >'+sSearchStr+'</label>';
             if ( !oSettings.aanFeatures.f )
             {
                 nFilter.id = oSettings.sTableId+'_filter';
@@ -1998,6 +1998,7 @@
                 }
             } );
 
+            jqFilter.attr('style','float:right');
             jqFilter
                     .attr('aria-controls', oSettings.sTableId)
                     .bind( 'keypress.DT', function(e) {
@@ -2705,6 +2706,7 @@
 
 
             $('select', nLength).attr('aria-controls', oSettings.sTableId);
+
 
             return nLength;
         }

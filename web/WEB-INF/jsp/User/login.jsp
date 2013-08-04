@@ -15,11 +15,11 @@
     <title>Pathshala Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Bootstrap -->
-    <link href="resources/css/bootstrap-responsive.css" rel="stylesheet"></link>
-    <link href="resources/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-    <link href="resources/css/bootstrap.css" rel="stylesheet" media="screen"/>
-  <link href="resources/css/bootstrap-responsive.css" rel="stylesheet" media="screen"/>
-  <link href="resources/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"/>
+    <link href="resources/css1/bootstrap-responsive.css" rel="stylesheet"></link>
+    <link href="resources/css1/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <link href="resources/css1/bootstrap.css" rel="stylesheet" media="screen"/>
+  <link href="resources/css1/bootstrap-responsive.css" rel="stylesheet" media="screen"/>
+  <link href="resources/css1/bootstrap-responsive.min.css" rel="stylesheet" media="screen"/>
   
   <!-- Sticky Footer Style -->
   <style type="text/css">
@@ -178,25 +178,25 @@
       </div>
     </div>
         </div>
-    <script src="resources/js/jquery.js"></script>
-    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js1/jquery.js"></script>
+    <script src="resources/js1/bootstrap.min.js"></script>
     
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     
-    <script src="resources/js/bootstrap-transition.js"></script>
-    <script src="resources/js/bootstrap-alert.js"></script>
-    <script src="resources/js/bootstrap-modal.js"></script>
-    <script src="resources/js/bootstrap-dropdown.js"></script>
-    <script src="resources/js/bootstrap-scrollspy.js"></script>
-    <script src="resources/js/bootstrap-tab.js"></script>
-    <script src="resources/js/bootstrap-tooltip.js"></script>
-    <script src="resources/js/bootstrap-popover.js"></script>
-    <script src="resources/js/bootstrap-button.js"></script>
-    <script src="resources/js/bootstrap-collapse.js"></script>
-    <script src="resources/js/bootstrap-carousel.js"></script>
-    <script src="resources/js/bootstrap-typeahead.js"></script>
+    <script src="resources/js1/bootstrap-transition.js"></script>
+    <script src="resources/js1/bootstrap-alert.js"></script>
+    <script src="resources/js1/bootstrap-modal.js"></script>
+    <script src="resources/js1/bootstrap-dropdown.js"></script>
+    <script src="resources/js1/bootstrap-scrollspy.js"></script>
+    <script src="resources/js1/bootstrap-tab.js"></script>
+    <script src="resources/js1/bootstrap-tooltip.js"></script>
+    <script src="resources/js1/bootstrap-popover.js"></script>
+    <script src="resources/js1/bootstrap-button.js"></script>
+    <script src="resources/js1/bootstrap-collapse.js"></script>
+    <script src="resources/js1/bootstrap-carousel.js"></script>
+    <script src="resources/js1/bootstrap-typeahead.js"></script>
     
   </body>
 </html>

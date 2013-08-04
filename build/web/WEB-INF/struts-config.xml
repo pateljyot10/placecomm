@@ -232,7 +232,15 @@
         <forward name="quiz" path="/WEB-INF/jsp/theAssignment/Students/CreateQuizStudent/createQuestions.jsp" />
         <forward name="edit" path="/WEB-INF/jsp/theAssignment/Students/CreateQuizStudent/editQuestion.jsp" />
     </action>
-        
+    
+    <action  path="/NevigationHandler" name="StudentQuizForm"
+                 forward="/WEB-INF/jsp/placecomm/company.jsp" />
+    <action  path="/HRHandler" name="StudentQuizForm"
+                 forward="/WEB-INF/jsp/placecomm/hr.jsp" />
+    
+    
+          
+                
     </action-mappings>
     
     
