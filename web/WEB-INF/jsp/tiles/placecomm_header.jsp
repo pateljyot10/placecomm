@@ -1,6 +1,5 @@
+
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
-
-
 
        <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
@@ -49,7 +48,7 @@
                                     Stories <b class="caret"></b>
                                 </a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                                    <li><a tabindex="-1" href="./index.html">Calling & Appointment</a></li>
+                                    <li><html:link page="/StoryHandler.do" tabindex="-1">Calling & Appointment</html:link></li>
                                     <li><a tabindex="-1" href="theme/united/index.html">Custom Stories</a></li>
                                     <li><a tabindex="-1" href="theme/united/index.html">Interest Invites</a></li>
                                     <li><a tabindex="-1" href="theme/united/index.html">Interview Scheduling</a></li>
